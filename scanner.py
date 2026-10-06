@@ -42,12 +42,35 @@ def scan_directory(target_path):
 
     for current_root, _, files in os.walk(path):
         for file_name in files:
+               ignored_directories = {
+        ".git",
+        "__pycache__",
+        ".venv",
+        "venv",
+        "node_modules",
+    }
+
+    for current_root, directories, files in os.walk(path):
+
+        # Ignore generated/dependency directories
+        directories[:] = [
+            directory
+            for directory in directories
+            if directory not in ignored_directories
+        ]
+
+        for file_name in files:
+
             file_path = Path(current_root) / file_name
 
             try:
                 relative_path = file_path.relative_to(path)
             except ValueError:
                 relative_path = file_path
+
+            # Ignore this project's own test files
+            if "tests" in relative_path.parts:
+                continue
 
             extension = file_path.suffix.lower()
 
@@ -66,6 +89,9 @@ def scan_directory(target_path):
             except OSError:
                 continue
 
+            if "docs" in relative_path.parts:
+                continue
+                
             scan_file_content(file_path, relative_path, results)
 
     return results
