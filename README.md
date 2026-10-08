@@ -1,7 +1,7 @@
 # 🛡️ Mini DevSecOps Security Scanner
 
 ### 🚀 Live Demo
-**[Open the Live Security Scanner]([PASTE_YOUR_STREAMLIT_URL_HERE](https://mini-devsecops-security-scanner-deployed-url.streamlit.app/))**
+**[Open the Live Security Scanner]((https://mini-devsecops-security-scanner-deployed-url.streamlit.app/))**
 
 > A Python-based DevSecOps security scanner with an interactive Streamlit dashboard.
 
