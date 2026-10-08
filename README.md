@@ -1,5 +1,14 @@
 # 🛡️ Mini DevSecOps Security Scanner
 
+### 🚀 Live Demo
+**[Open the Live Security Scanner]([PASTE_YOUR_STREAMLIT_URL_HERE](https://mini-devsecops-security-scanner-deployed-url.streamlit.app/))**
+
+> A Python-based DevSecOps security scanner with an interactive Streamlit dashboard.
+
+### 📦 GitHub Repository
+
+This repository contains the complete source code, tests, documentation, Git workflow, and project files.
+
 A lightweight DevSecOps security scanning project built using **Python, Streamlit, Git, and GitHub**.
 
 The project scans software projects for common security, configuration, and file-hygiene risks. It provides both a **command-line scanner** and an interactive **web dashboard** with a security score, detailed findings, and security recommendations.
